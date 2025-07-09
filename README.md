@@ -22,8 +22,8 @@ Aplicación web ASP.NET Core para administrar un listado de mascotas. Permite cr
 1. Clonar el repositorio:
 
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
-   cd MascotasWeb
+   git clone https://github.com/moreiraed/mascotasweb.git
+   cd mascotasweb
    ```
 
 2. Restaurar paquetes NuGet:
