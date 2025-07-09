@@ -1,0 +1,52 @@
+@model MascotasWeb.Models.Mascota
+
+@{
+    ViewData["Title"] = "Editar Mascota";
+}
+
+<h1>Editar Mascota</h1>
+
+<form asp-action="Edit" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Especie"></label>
+        <select asp-for="Especie" class="form-control"
+                asp-items="Html.GetEnumSelectList<MascotasWeb.Models.Especie>()"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Raza"></label>
+        <input asp-for="Raza" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Color"></label>
+        <input asp-for="Color" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FechaNacimiento"></label>
+        <input asp-for="FechaNacimiento" type="date" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Imagen actual</label><br />
+        <img src="@Model.Imagen" width="120" /><br /><br />
+
+        <label>Subir nueva imagen (opcional)</label>
+        <input type="file" name="imagenArchivo" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Descripcion"></label>
+        <textarea asp-for="Descripcion" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Guardar cambios</button>
+</form>

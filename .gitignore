@@ -1,0 +1,33 @@
+# Archivos de compilación y salida
+bin/
+obj/
+
+# Archivos de configuración locales de Visual Studio y lanzamientos
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos de base de datos generados localmente
+mascotas.db
+
+# Carpeta donde se suben imágenes de usuarios (no versionar)
+wwwroot/img/uploads/
+
+# Archivos temporales y de sistema
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Configuración local sensible (por ejemplo claves)
+appsettings.Development.json
+
+# Rider IDE
+.idea/
+
+# Residuos de paquetes NuGet
+*.nupkg
+packages/
+.nuget/
