@@ -32,19 +32,25 @@ Aplicación web ASP.NET Core para administrar un listado de mascotas. Permite cr
    dotnet restore
    ```
 
-3. Ejecutar migraciones (si no se tiene la base de datos local):
+3. Si dotnet ef no es reconocido, instale la herramienta CLI de Entity Framework con:
+
+   ```bash
+   dotnet tool install --global dotnet-ef
+   ```
+
+4. Ejecutar migraciones (si no se tiene la base de datos local):
 
    ```bash
    dotnet ef database update
    ```
 
-4. Levantar la aplicación:
+5. Levantar la aplicación:
 
    ```bash
    dotnet run
    ```
 
-5. Abrir en navegador la URL que indica la consola, usualmente:
+6. Abrir en navegador la URL que indica la consola, usualmente:
 
    ```
    https://localhost:5001
