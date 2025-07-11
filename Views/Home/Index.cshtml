@@ -23,8 +23,6 @@
             <div class="card-body">
                 <h5 class="card-title">@mascota.Nombre</h5>
                 <p class="card-text">
-                    <strong>Especie:</strong> @mascota.Especie <br />
-                    <strong>Raza:</strong> @mascota.Raza <br />
                     <button class="btn btn-info btn-sm d-inline d-md-none mt-2" 
                             type="button" 
                             data-bs-toggle="collapse" 
@@ -34,6 +32,8 @@
                         Ver detalles
                     </button>
                     <div class="collapse d-md-block" id="detalles-@mascota.Id">
+                        <strong>Especie:</strong> @mascota.Especie <br />
+                        <strong>Raza:</strong> @mascota.Raza <br />
                         <strong>Color:</strong> @mascota.Color <br />
                         <strong>Fecha Nacimiento:</strong> @mascota.FechaNacimiento <br />
                         <strong>Descripción:</strong> @mascota.Descripcion
