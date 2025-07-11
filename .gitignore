@@ -10,10 +10,10 @@ obj/
 *.sln.docstates
 
 # Archivos de base de datos generados localmente
-mascotas.db
+# mascotas.db
 
 # Carpeta donde se suben imágenes de usuarios (no versionar)
-wwwroot/img/uploads/
+# wwwroot/img/uploads/
 
 # Archivos temporales y de sistema
 *.log

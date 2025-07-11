@@ -4,44 +4,53 @@
     ViewData["Title"] = "Crear Mascota";
 }
 
-<h1>Crear Mascota</h1>
+<h1 class="text-center text-success">Crear Mascota</h1>
 
-<form asp-action="Create" enctype="multipart/form-data">
-    <div class="form-group">
-        <label asp-for="Nombre"></label>
-        <input asp-for="Nombre" class="form-control" />
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <form asp-action="Create" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Nombre"></label>
+                    <input asp-for="Nombre" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Especie"></label>
+                    <select asp-for="Especie" class="form-control"
+                        asp-items="Html.GetEnumSelectList<MascotasWeb.Models.Especie>()"></select>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Raza"></label>
+                    <input asp-for="Raza" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Color"></label>
+                    <input asp-for="Color" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="FechaNacimiento"></label>
+                    <input asp-for="FechaNacimiento" type="date" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label>Imagen</label>
+                    <input type="file" name="imagenArchivo" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Descripcion"></label>
+                    <textarea asp-for="Descripcion" class="form-control"></textarea>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary mt-3 w-100">Crear</button>
+                </div>
+
+            </form>
+        </div>
     </div>
-
-    <div class="form-group">
-        <label asp-for="Especie"></label>
-        <select asp-for="Especie" class="form-control"
-            asp-items="Html.GetEnumSelectList<MascotasWeb.Models.Especie>()"></select>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Raza"></label>
-        <input asp-for="Raza" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Color"></label>
-        <input asp-for="Color" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label asp-for="FechaNacimiento"></label>
-        <input asp-for="FechaNacimiento" type="date" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label>Imagen</label>
-        <input type="file" name="imagenArchivo" class="form-control" />
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Descripcion"></label>
-        <textarea asp-for="Descripcion" class="form-control"></textarea>
-    </div>
-
-    <button type="submit" class="btn btn-primary mt-3">Crear</button>
-</form>
+</div>
